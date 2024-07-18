@@ -142,7 +142,7 @@ public class Pipeline {
         }
     }
 
-    public void release() throws IOException {
+    public void release() throws Exception {
         for (IOutputRaw node : topologySolver.getSources()) {
             ((Closeable) node).close();
         }

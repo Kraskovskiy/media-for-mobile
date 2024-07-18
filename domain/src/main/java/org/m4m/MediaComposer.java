@@ -387,7 +387,7 @@ public class MediaComposer implements Serializable {
                     try {
                         pipeline.release();
                         notifyOnError(e);
-                    } catch (IOException e1) {
+                    } catch (Exception e1) {
                         notifyOnError(e);
                         notifyOnError(e1);
                     }
@@ -396,7 +396,7 @@ public class MediaComposer implements Serializable {
 
                 try {
                     pipeline.release();
-                } catch (IOException e) {
+                } catch (Exception e) {
                     notifyOnError(e);
                     return;
                 }

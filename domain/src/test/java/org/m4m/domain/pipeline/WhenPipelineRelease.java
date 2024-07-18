@@ -31,7 +31,7 @@ import static org.mockito.Mockito.verify;
 public class WhenPipelineRelease extends TestBase {
 
     @Test
-    public void mediaMuxerDisposed() throws IOException {
+    public void mediaMuxerDisposed() throws Exception {
         IMediaMuxer mediaMuxer = create.mediaMuxer().construct();
         Render render = create.render().with(mediaMuxer).construct();
         CommandProcessorSpy commandProcessor = create.commandProcessor().construct();
@@ -51,7 +51,7 @@ public class WhenPipelineRelease extends TestBase {
     }
 
     @Test
-    public void decoderDisposed() throws IOException {
+    public void decoderDisposed() throws Exception {
 
         IMediaCodec mediaCodec = create.mediaCodec().construct();
         VideoDecoder videoDecoder = create.videoDecoder().with(mediaCodec).construct();
